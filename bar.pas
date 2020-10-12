@@ -52,7 +52,7 @@ begin
   self.left:=0;
   self.top:=0;
   self.width:=screen.width;
-  self.height:=5;
+  self.height:=1;
 
   Self.CreateMainForm;
 end;
