@@ -1,12 +1,12 @@
 object frmMain: TfrmMain
-  Left = 222
-  Top = 156
+  Left = 197
+  Top = 136
   AlphaBlend = True
   AlphaBlendValue = 192
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsNone
   Caption = 'Clock'
-  ClientHeight = 22
+  ClientHeight = 25
   ClientWidth = 428
   Color = clBlack
   Font.Charset = DEFAULT_CHARSET
@@ -17,14 +17,16 @@ object frmMain: TfrmMain
   FormStyle = fsStayOnTop
   OldCreateOrder = False
   OnCreate = FormCreate
+  OnMouseMove = FormMouseMove
   PixelsPerInch = 96
   TextHeight = 13
   object lblTime: TLabel
-    Left = 313
-    Top = 0
-    Width = 80
-    Height = 22
-    Align = alRight
+    Left = 35
+    Top = 1
+    Width = 358
+    Height = 23
+    Align = alClient
+    Alignment = taRightJustify
     Caption = '00:00:00'
     Color = clNone
     Font.Charset = ANSI_CHARSET
@@ -37,30 +39,58 @@ object frmMain: TfrmMain
     ShowAccelChar = False
     Transparent = True
     Layout = tlCenter
+    OnMouseMove = FormMouseMove
   end
   object pnlPadLeft: TPanel
     Left = 0
-    Top = 0
+    Top = 1
     Width = 35
-    Height = 22
+    Height = 23
     Align = alLeft
     BevelOuter = bvNone
     Caption = 'pnlPadLeft'
     Color = clNone
     TabOrder = 0
+    OnMouseMove = FormMouseMove
   end
   object pnlPadRight: TPanel
     Left = 393
-    Top = 0
+    Top = 1
     Width = 35
-    Height = 22
+    Height = 23
     Align = alRight
     BevelOuter = bvNone
     Caption = 'pnlPadLeft'
     Color = clNone
     TabOrder = 1
+    OnMouseMove = FormMouseMove
+  end
+  object pnlPadBottom: TPanel
+    Left = 0
+    Top = 24
+    Width = 428
+    Height = 1
+    Align = alBottom
+    BevelOuter = bvNone
+    Caption = 'pnlPadLeft'
+    Color = clNone
+    TabOrder = 2
+    OnMouseMove = FormMouseMove
+  end
+  object pnlPadTop: TPanel
+    Left = 0
+    Top = 0
+    Width = 428
+    Height = 1
+    Align = alTop
+    BevelOuter = bvNone
+    Caption = 'pnlPadLeft'
+    Color = clNone
+    TabOrder = 3
+    OnMouseMove = FormMouseMove
   end
   object timer: TTimer
+    Enabled = False
     Interval = 250
     OnTimer = timerTimer
     Left = 296

@@ -3,8 +3,7 @@ program clock;
 uses
   Forms, Windows,
   main in 'main.pas' {frmMain},
-  timeMan in 'timeMan.pas',
-  bar in 'bar.pas' {frmBar};
+  timeMan in 'timeMan.pas';
 
 {$R *.res}
 var
@@ -17,6 +16,6 @@ begin
   end;
 
   Application.Initialize;
-  Application.CreateForm(TfrmBar, frmBar);
+  Application.CreateForm(TfrmMain, frmMain);
   Application.Run;
 end.
