@@ -1,5 +1,5 @@
 object frmMain: TfrmMain
-  Left = 277
+  Left = 222
   Top = 156
   AlphaBlend = True
   AlphaBlendValue = 192

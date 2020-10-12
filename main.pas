@@ -19,14 +19,9 @@ type
     { Private declarations }
     procedure UpdateLayout;
     procedure UpdateTime;
-    procedure CMMouseLeave(var Message: TMessage); message CM_MOUSELEAVE;
     procedure WMDisplayChange(var Message: TWMDisplayChange); message WM_DISPLAYCHANGE;
-  protected
-    FOnMouseLeave: TNotifyEvent;
   public
     { Public declarations }
-  published
-    property OnMouseLeave:TNotifyEvent read FOnMouseLeave write FOnMouseLeave;
   end;
 
 var
@@ -65,14 +60,9 @@ begin
   UpdateTime();
 end;
 
-procedure TfrmMain.CMMouseLeave(var Message: TMessage);
-begin
-  if Assigned(Self.OnMouseLeave) then
-    Self.OnMouseLeave(Self);
-end;
-
 procedure TfrmMain.WMDisplayChange(var Message: TWMDisplayChange);
 begin
+  // resolution changed
   self.UpdateLayout;
 end;
 

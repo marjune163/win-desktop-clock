@@ -22,7 +22,6 @@ type
     frmMain:TfrmMain;
     procedure CreateMainForm;
     procedure ToggleMainForm;
-    procedure MainFormMouseLeave(Sender: TObject);
     procedure CMMouseLeave(var Message: TMessage); message CM_MOUSELEAVE;
     { Private declarations }
   public
@@ -41,7 +40,6 @@ uses Math;
 procedure TfrmBar.CreateMainForm;
 begin
   Self.frmMain:=TFrmMain.Create(self);
-  Self.frmMain.OnMouseLeave:=Self.MainFormMouseLeave;
   Self.frmMain.Top:=-Self.frmMain.Height;
   Self.frmMain.Show;
 end;
@@ -70,14 +68,6 @@ begin
 end;
 
 procedure TfrmBar.CMMouseLeave(var Message: TMessage);
-begin
-  if isShowMainForm=true then begin
-    isShowMainForm:=false;
-    self.ToggleMainForm;
-  end;
-end;
-
-procedure TfrmBar.MainFormMouseLeave(Sender: TObject);
 begin
   if isShowMainForm=true then begin
     isShowMainForm:=false;
