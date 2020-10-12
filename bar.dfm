@@ -1,6 +1,6 @@
 object frmBar: TfrmBar
-  Left = 252
-  Top = 160
+  Left = 229
+  Top = 145
   AlphaBlend = True
   AlphaBlendValue = 1
   BorderStyle = bsNone

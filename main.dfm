@@ -17,7 +17,6 @@ object frmMain: TfrmMain
   FormStyle = fsStayOnTop
   OldCreateOrder = False
   OnCreate = FormCreate
-  OnMouseDown = FormMouseDown
   PixelsPerInch = 96
   TextHeight = 13
   object lblTime: TLabel
@@ -38,7 +37,6 @@ object frmMain: TfrmMain
     ShowAccelChar = False
     Transparent = True
     Layout = tlCenter
-    OnMouseDown = FormMouseDown
   end
   object pnlPadLeft: TPanel
     Left = 0

@@ -14,8 +14,6 @@ type
     pnlPadRight: TPanel;
     procedure timerTimer(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: Integer);
   private
     timeManager:TTimeManager;
     { Private declarations }
@@ -65,13 +63,6 @@ end;
 procedure TfrmMain.timerTimer(Sender: TObject);
 begin
   UpdateTime();
-end;
-
-procedure TfrmMain.FormMouseDown(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: Integer);
-begin
-  ReleaseCapture;
-  PostMessage(Self.Handle,WM_SYSCOMMAND,SC_MOVE+1,0)
 end;
 
 procedure TfrmMain.CMMouseLeave(var Message: TMessage);
